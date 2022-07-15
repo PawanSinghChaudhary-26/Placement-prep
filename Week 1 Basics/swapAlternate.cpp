@@ -7,7 +7,12 @@ void swapAlternate(int a[],int size)
     int shift=1;
     while(shift<size)
     {
-        swap(a[start],a[shift]);
+       /* swap(a[start],a[shift]);
+        start+=2;
+        shift+=2;*/
+        int temp=a[start];
+        a[start]=a[shift];
+        a[shift]=temp;
         start+=2;
         shift+=2;
     }
