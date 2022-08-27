@@ -2,7 +2,7 @@
 using namespace std;
 bool prime(int n)
 {
-     for(int i=2;i<=n/2; i++)
+     for(int i=2;i*i<=n; i++)
     {
         if(n%i==0)
         {
@@ -14,7 +14,7 @@ bool prime(int n)
 }
 int sieveOE(int arr[],int n)
 {
-    arr[0]=arr[1]=false;
+    arr[0]=arr[1]=0;
     int count=0;
     for(int i=2;i<n;i++)
     {
@@ -33,7 +33,7 @@ int main()
     int n;
     cout<<"enter the max value \n";
     cin>>n;
-    int arr[50]={1};
+    int arr[n]={1};
     cout<<sieveOE(arr,n);
     return 0;
 }
