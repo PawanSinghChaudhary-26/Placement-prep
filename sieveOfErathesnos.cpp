@@ -14,7 +14,7 @@ bool prime(int n)
 }
 int sieveOE(int arr[],int n)
 {
-    arr[0]=arr[1]=false;
+    arr[0]=arr[1]=0;
     int count=0;
     for(int i=2;i<n;i++)
     {
